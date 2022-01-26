@@ -14,8 +14,26 @@
 
 <body>
     <div id="root">
-        <h1>{{message}}</h1>
-        <img v-bind:src="image" alt="">
+        <div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+            <div class=" card " v-bind:class="[color, bgColor]" style="width: 18rem;">
+                <img v-bind:src="image" class="card-img-top" :alt="alt">
+                <div class="card-body">
+                    <h1 class="card-title">{{message}}</h1>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn" :class="btnColor">Go somewhere</a>
+                    <button type="button" class="btn my-3" @click="changeButtonLight" :class="btnColor">Cambia
+                        tema</button>
+                </div>
+            </div>
+
+
+
+            <!-- <h1>{{message}}</h1>
+            <div id="image">
+                <img v-bind:src="image" :alt="alt">
+            </div> -->
+        </div>
     </div>
 
     <script src="js/script.js"></script>
